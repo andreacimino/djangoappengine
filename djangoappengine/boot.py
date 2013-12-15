@@ -19,7 +19,7 @@ DATA_ROOT = os.path.join(PROJECT_DIR, '.gaedata')
 # Overrides for os.environ.
 env_ext = {}
 if 'DJANGO_SETTINGS_MODULE' not in os.environ:
-    env_ext['DJANGO_SETTINGS_MODULE'] = 'settings'
+    env_ext['DJANGO_SETTINGS_MODULE'] = 'zonzofox_main.settings'
 
 
 def setup_env():

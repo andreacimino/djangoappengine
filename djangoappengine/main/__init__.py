@@ -79,6 +79,8 @@ if settings.DEBUG and 'django.contrib.staticfiles' in settings.INSTALLED_APPS:
     from django.contrib.staticfiles.handlers import StaticFilesHandler
     application = StaticFilesHandler(application)
 
+import gae_mini_profiler.profiler
+application = gae_mini_profiler.profiler.ProfilerWSGIMiddleware(application)
 if getattr(settings, 'ENABLE_APPSTATS', False):
     from google.appengine.ext.appstats.recording import \
         appstats_wsgi_middleware

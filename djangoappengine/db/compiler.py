@@ -200,10 +200,10 @@ class GAEQuery(NonrelQuery):
         # Optimization: batch-get by key; this is only suitable for
         # primary keys, not for anything that uses the key type.
         if field.primary_key and lookup_type in ('exact', 'in'):
-            if self.included_pks is not None:
-                raise DatabaseError("You can't apply multiple AND "
-                                    "filters on the primary key. "
-                                    "Did you mean __in=[...]?")
+            # if self.included_pks is not None:
+            #     raise DatabaseError("You can't apply multiple AND "
+            #                         "filters on the primary key. "
+            #                         "Did you mean __in=[...]?")
             if not isinstance(value, (tuple, list)):
                 value = [value]
             pks = [pk for pk in value if pk is not None]
