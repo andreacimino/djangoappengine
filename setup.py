@@ -9,13 +9,14 @@ except:
     pass
 
 setup(name='djangoappengine',
-      version='1.6.1',
+      version='1.6.3',
       description=DESCRIPTION,
       long_description=LONG_DESCRIPTION,
       author='Waldemar Kornewald',
       author_email='wkornewald@gmail.com',
       url='https://github.com/django-nonrel/djangoappengine',
       packages=find_packages(exclude=['docs']),
+      include_package_data=True,
       install_requires=['djangotoolbox>=1.6.0'],
       zip_safe=False,
       license='3-clause BSD',
